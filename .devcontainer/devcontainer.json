@@ -8,7 +8,8 @@
 		"vscode": {
 			"extensions": [
 				"James-Yu.latex-workshop",
-				"mhutchie.git-graph"
+				"mhutchie.git-graph",
+                "vivaxy.vscode-conventional-commits"
 			]
 		}
 	},
