@@ -29,7 +29,6 @@
 *.xml
 *.pdf
 !figures/*.pdf
-!main.pdf
 
 # Ignore node_modules
 node_modules/
