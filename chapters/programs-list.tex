@@ -1,0 +1,38 @@
+%! TEX root = ../main.tex
+\documentclass[main]{subfiles}
+
+\begin{document}
+
+\chapter{プログラムリスト}
+
+\lstdefinelanguage{JavaScript}{
+    keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+    ndkeywords={class, export, boolean, throw, implements, import, this},
+    comment=[l]{//},
+    morecomment=[s]{/*}{*/},
+    morestring=[b]',
+    morestring=[b]"
+}
+\lstset{
+    basicstyle={\small},
+    identifierstyle={\small},
+    commentstyle={\small\ttfamily \color[rgb]{0,0.5,0}},
+    keywordstyle={\small\bfseries \color[rgb]{1,0,0}},
+    ndkeywordstyle={\small},
+    stringstyle={\small\ttfamily \color[rgb]{0,0,1}},
+    frame={tb},
+    breaklines=true,
+    columns=[l]{fullflexible},
+    numbers=left,
+    xrightmargin=0zw,
+    xleftmargin=3zw,
+    numberstyle={\scriptsize},
+    stepnumber=1,
+    numbersep=1zw,
+    morecomment=[l]{//}
+}
+
+\lstinputlisting[caption=sample1.py, language=Python]{programs/sample1.py}
+\lstinputlisting[caption=sample2.js, language=JavaScript]{programs/sample2.js}
+
+\end{document}

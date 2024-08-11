@@ -1,0 +1,69 @@
+%! TEX root = ../main.tex
+\documentclass[main]{subfiles}
+
+\begin{document}
+
+\chapter{図と表}
+\label{cha:exfig}
+
+\section{図の貼り方}
+
+図を一枚だけ貼る場合は、図 \ref{fig:one-fig} の貼り方を参照し、
+二枚貼る場合は、図 \ref{fig:two-fig} の貼り方を参照せよ。
+基本的にまず、それぞれの該当箇所をコピー＆ペーストして、図の実態がある場所 (例\verb|../figures/dummy1.png|)
+を修正し、さらに、キャプショ \verb|\caption{...}|、\verb|\label{}|を修正したらよい
+論文に貼る図として、pdf 、png、または、jpg 形式のファイルを準備せよ。これらが綺麗な図となる。
+
+
+\begin{figure}[tb]
+    \begin{center}
+        \fbox{
+            \includegraphics[width=.8\linewidth]%
+            {../figures/dummy1.pdf}
+        }
+        \caption{一枚だけ表示する場合}
+        \label{fig:one-fig}
+    \end{center}
+\end{figure}
+
+\begin{figure}[tb]
+    \begin{minipage}[b]{\linewidth}
+        \centering
+        \fbox{
+            \includegraphics[width=.8\linewidth]{../figures/dummy2.png}
+        }
+        \subcaption{dummy2.png}
+    \end{minipage}\\
+    \begin{minipage}[b]{\linewidth}
+        \centering
+        \fbox{
+            \includegraphics[width=.8\linewidth]{../figures/dummy3.jpg}
+        }
+        \subcaption{dummy3.jpg}
+    \end{minipage}
+    \caption{二枚を表示する場合}
+    \label{fig:two-fig}
+\end{figure}
+
+
+\section{表の書き方}
+
+表 \ref{tab:example} をベースに作成したらよい。修正すべき点は、図の場合とほぼ同じ。
+
+\begin{table}[tb]
+    \caption{センサノードのパラメータ}
+    \label{tab:example}
+    \centering
+    \begin{tabular}{lc}
+        \hline
+        Frequency                     & 2.44 [GHz]   \\
+        Transmission rate             & 250 [Kbit/s] \\
+        Antenna gain                  & 2 [dBi]      \\
+        Minimum receiving sensitivity & -96 [dBm]    \\
+        Voltage                       & 3.3 [V]      \\
+        Size per packet               & 127[Byte]    \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\end{document}
