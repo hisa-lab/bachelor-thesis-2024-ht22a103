@@ -6,9 +6,10 @@ name: build
 on:
   push:
     branches:
-      - master
+      - main
     tags:
       - "v*"
+    workflow_dispatch:
 
 env:
   # MakefileでDockerを使う機能を無効にする
