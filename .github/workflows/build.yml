@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-22.04
     container:
       # もし独自のDockerイメージを変更したい場合、ここを変更する
-      image: ghcr.io/being24/latex-docker:latest
+      image: ghcr.io/hisamatsu/latex-docker:latest
       options: --user root
     steps:
       - name: Checkout
