@@ -1,70 +1,33 @@
-# 日本語論文をLaTeXで書いて、textlintをするためのテンプレート
+# 大阪電気通信大学 情報学科 卒業論文テンプレート
 
-## 機能
+## 概要
 
-* 個人環境にLaTeX workshopを構築せず、dockerでビルドします
-* GitHub Actionsを使用してtextlintを実行します
-* github上にreleaseします
-* レジュメや論文用のテンプレートを持ちますが、あくまで個人の環境用に構築したものです
+[latex-template-ja](https://github.com/being24/latex-template-ja) と一連の docker イメージをベースに
+作成された大阪電気通信大学 情報学科の卒業論文のテンプレート。
 
-## 環境
+VS Code の devcontainer を用いており、VS Code と Docker Desktop がインストールされている環境を前提としている。
 
-* Windows 10 or later
-* macOS 10.14 or later
-* Ubuntu 18.04 LTS or later
+## まず最初にやること
 
-Docker環境が必要ですが、clsファイルについては多少弄ればCloud LaTeX等でも使用できます
+ 1. [github の hisa-lab](https://github.com/hisa-lab) にリポジトリ **bachelor-thesis-yyyy-ht99a999** (yyyy は西暦、ht99a999 は自分の学生番号に、それぞれ置き換え) を作成
+ 2. [このリポジトリ](https://github.com/hisa-lab/template-bachelor-thesis)を clone し、push 先を先程作成したリポジトリに変更i(以下参照。リポジトリは各自のものに変更すること）して、push。
+```
+git remote rm origin
+git remote add origin git@github.com:hisa-lab/bachelor-thesis-yyyy-ht99a999
+git push -u origin main
+```
 
-* Docker Desktop for Mac 2.1 or later
-* Docker 18.06 or later
-* Docker Desktop for Windows
 
-ghcr.io/being24/latex-docker を使用します  
-ビルド用のdocker imageは[こちらのリポジトリ](https://github.com/being24/latex-docker)を参照してください
+ ## 論文の PDF 作成方法
 
-また、VSCodeが必要です
+ 1. 論文執筆
+ 2. LaTeX のソースコード(例えば hoge.tex)を VS Code で表示しておく。
+ 2. VS Code のアクティビティバー（拡張機能等が表示されているところ）のTEXを選択
+ 3. コマンドから LaTeX プロジェクトをビルド
+ 4. LaTeX の記述内容に問題がなければ PDF が生成される。
+ 5. コミット && push
 
-![demo](example/figures/screenshot.png)
-
-## 使い方
-
-使い方やFAQはこの[記事](https://zenn.dev/being/articles/how-to-use-my-latex)にまとめています
-
-## License
-
-CC0
-
-## Author
-
-Being
-
-## config
-
-VSCode上での設定例は[settings.json](.vscode/settings.json)を参照してください
-
-## テンプレートについて
-
-できるだけ現代的な設定を意識して作成したテンプレートですが、LaTeXに詳しいわけではないので誤りがあった場合は教えていただけると幸いです  
-実際の使用時はexample等必要のないファイルは消してください
-
-jlistingの代わりにmintedを使用し、参考文献はbiblatexを使用します
-(mintedは環境によっては使用できないため、コメントアウトしてあります)
-
-### resume.cls
-
-[resume.cls](/classes/resume.cls)は2段組みのレジュメを作成するためのクラスファイルです  
-使用方法は[例](/example/tex/resume_template.tex)を参照してください
-
-### report.cls
-
-[report.cls](/classes/report.cls)は論文を作成するためのクラスファイルです  
-使用方法は[例](/example/tex/report_template.tex)を参照してください
-
-### .vscode/settings.jsonについて
-
-使用しやすい設定を参考程度ですが上げておきます。  
-VSCodeであればこの設定を読み込んでくれるため、設定を変更する必要はありません
 
 ## 参考URL
 
-<https://poyo.hatenablog.jp/entry/2020/12/05/110000>
+<https://zenn.dev/being/articles/how-to-use-my-latex>
