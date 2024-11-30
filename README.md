@@ -10,7 +10,7 @@ VS Code の devcontainer を用いており、VS Code と Docker Desktop がイ�
 ## まず最初にやること
 
  1. [github の hisa-lab](https://github.com/hisa-lab) にリポジトリ **bachelor-thesis-yyyy-ht99a999** (yyyy は西暦、ht99a999 は自分の学生番号に、それぞれ置き換え) を作成
- 2. [このリポジトリ](https://github.com/hisa-lab/template-bachelor-thesis)を clone し、push 先を先程作成したリポジトリに変更i(以下参照。リポジトリは各自のものに変更すること）して、push。
+ 2. [このリポジトリ](https://github.com/hisa-lab/template-bachelor-thesis)を clone し、push 先を先程作成したリポジトリに変更(以下参照。リポジトリは各自のものに変更すること）して、push。
 ```
 git remote rm origin
 git remote add origin git@github.com:hisa-lab/bachelor-thesis-yyyy-ht99a999
@@ -20,11 +20,12 @@ git push -u origin main
 
  ## 論文の PDF 作成方法
 
+ 0. VS Code を起動 & コンテナでリポジトリを開く
  1. 論文執筆
- 2. LaTeX のソースコード(例えば hoge.tex)を VS Code で表示しておく。
+ 2. LaTeX のソースコード(例えば hoge.tex)を VS Code で表示
  2. VS Code のアクティビティバー（拡張機能等が表示されているところ）のTEXを選択
  3. コマンドから LaTeX プロジェクトをビルド
- 4. LaTeX の記述内容に問題がなければ PDF が生成される。
+ 4. LaTeX の記述内容に問題がなければ PDF の生成を確認
  5. コミット && push
 
 
