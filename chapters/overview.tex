@@ -7,7 +7,7 @@
 \section{アプリケーションの構成}
 
 開発したアプリケーションのシステム構成図を示す\ref{fig:system}。
-本アプリケーションは、フロントエンドにReact、サーバーサイドにNode.jsを使用して構築された。
+本アプリケーションは、フロントエンドにReact、サーバーサイドにNode.jsを使用して構築される。
 フロントエンドでは、ユーザーがレシート画像をアップロードし、解析結果を閲覧できるインターフェースを提供している。
 Reactのコンポーネントベースの設計により、ユーザーインターフェースをモジュール化し、メンテナンス性を向上させた。
 一方、サーバーサイドにはNode.jsを採用し、OCR解析やデータ処理のロジックを実装した。Node.jsの非同期処理能力を活用することで、
@@ -27,20 +27,21 @@ Reactのコンポーネントベースの設計により、ユーザーインタ
 
 \section{アプリケーションの機能}
 
-本研究で開発したアプリケーションに実装された機能について述べる。開発したアプリケーションの画面の全体図を図\ref{fig:overall}に示す。
-画面には、支出データの追加、カレンダー、手動での分類、合計金額を表示する機能が配置されている。
+本研究で開発したアプリケーションに実装された機能について述べる。
+% 開発したアプリケーションの画面の全体図を図\ref{fig:overall}に示す。
+本アプリケーションは、支出データの追加、カレンダー、手動での分類、合計金額を表示する機能で構成される。
 各機能の役割について、以下で解説する。
 
-\begin{figure}[tb]
-    \begin{center}
-        \fbox{
-            \includegraphics[width=.8\linewidth]%
-            {../figures/overall.png}
-        }
-        \caption{アプリケーションの画面}
-        \label{fig:overall}
-    \end{center}
-\end{figure}
+% \begin{figure}[tb]
+%     \begin{center}
+%         \fbox{
+%             \includegraphics[width=.8\linewidth]%
+%             {../figures/overall.png}
+%         }
+%         \caption{アプリケーションの画面}
+%         \label{fig:overall}
+%     \end{center}
+% \end{figure}
 
 \subsection{画像アップロード機能}
 
@@ -71,19 +72,17 @@ OCRエンジンでは、画像内の文字列情報がテキスト形式に変�
 \subsection{手動での分類機能}
 
 本システムにおける手動での分類機能は、OCRまたは手動で支出データの追加が行われた際にカテゴリの欄で手動で入力することができる。
-カテゴリの欄の画像を\ref{fig:category}以下に示す。
-
-\begin{figure}[tb]
-    \begin{center}
-        \fbox{
-            \includegraphics[width=.8\linewidth]%
-            {../figures/category.png}
-        }
-        \caption{カテゴリ入力欄}
-        \label{fig:category}
-    \end{center}
-\end{figure}
-
+% カテゴリの欄の画像を\ref{fig:category}以下に示す。
+% \begin{figure}[tb]
+%     \begin{center}
+%         \fbox{
+%             \includegraphics[width=.8\linewidth]%
+%             {../figures/category.png}
+%         }
+%         \caption{カテゴリ入力欄}
+%         \label{fig:category}
+%     \end{center}
+% \end{figure}
 本システムにおける手動での分類機能は、OCRや手動入力によって登録された支出データに対し、
 ユーザーが各項目に適切なカテゴリを付与するための機能である。
 この機能は、ユーザーが支出を目的別または種類別に分類し、データの管理性や視認性を向上させることを目的としている。
@@ -107,7 +106,6 @@ OCRエンジンでは、画像内の文字列情報がテキスト形式に変�
 
 この機能の実装においては、Reactの状態管理機能を活用し、支出データが更新されるたびに合計金額が再計算される仕組みを採用している。
 これにより、常に最新の支出状況を正確に表示することが可能である。
-
 本機能は、ユーザーが支出の総額を視覚的に把握することで、支出の過不足を容易に評価し、
 計画的な家計管理を実現するための重要な支援ツールとして機能している。
 
