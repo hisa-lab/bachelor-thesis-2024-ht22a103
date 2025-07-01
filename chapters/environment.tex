@@ -6,4 +6,36 @@
 \label{cha:environment}
 本章では、アプリケーションの開発に使用した環境について説明する。
 
+開発言語には、主にJavaScriptおよびReactを採用した。
+Reactは、コンポーネントベースの設計が可能であり、動的なUI構築に適していることから、
+ユーザビリティを重視した本アプリケーションにおいて有効と判断した。
+また、状態管理にはReactのuseStateおよびuseEffectといったフックを利用している。
+
+OCR処理には、オープンソースのOCRエンジンであるTesseract.jsを利用した。
+Tesseract.jsは、クライアントサイドで動作するJavaScriptベースのライブラリであり、
+Webアプリケーションへの組み込みが容易である点が利点である。
+
+データの保存には、Web Storage APIの一つであるlocalStorageを使用し、
+ユーザーの入力情報およびOCR結果をブラウザに一時保存できるようにした。
+
+さらに、本アプリケーションのソースコードはGitHub上でバージョン管理を行っている。
+GitHubは、分散型バージョン管理システムGitを基盤とした開発プラットフォームであり、
+コードの履歴管理、バグ追跡、ブランチによる機能追加の試行などが可能である。
+GitHubを採用したことでコードの可搬性と再現性を確保するとともに、
+今後の保守、改良にも対応しやすい環境を整備した。
+
+下に開発環境の簡単な図\ref{fig:environment}を示す
+
+\begin{figure}[tb]
+    \begin{center}
+        \fbox{
+            \includegraphics[width=.8\linewidth]%
+            {../figures/environment.png}
+        }
+        \caption{開発環境の簡単な図}
+        \label{fig:environment}
+    \end{center}
+
+\end{figure}
+
 \end{document}
