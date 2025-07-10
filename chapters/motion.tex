@@ -48,7 +48,8 @@
 その後、「アップロード」ボタンを押すことでOCR処理が実行される。
 OCR処理が実行されると、レシート画像からテキストデータが抽出される。
 このOCR解析結果を図\ref{fig:OCRresult}に示す。
-図\ref{fig:OCRresult}では、レシートに記載されている品目名、金額、日付などの情報がテキスト形式で表示されていることがわかる。
+図\ref{fig:OCRresult}では、図\ref{fig:cocos}のレシートを使用している。
+レシートに記載されている品目名、金額、日付などの情報がテキスト形式で表示されていることがわかる。
 この抽出されたテキストデータは、本システムによって行単位で解析される。
 行単位とは、OCRで生成された生テキストを「1行ごと」に区切り、その各行を解析の基本単位として処理する方法を指す。
 
@@ -76,7 +77,7 @@ OCR処理が実行されると、レシート画像からテキストデータ�
     \begin{center}
         \fbox{
             \includegraphics[width=.8\linewidth]%
-            {../figures/OCRresult.png}
+            {../figures/cocosresult.png}
         }
         \caption{OCR解析結果}
         \label{fig:OCRresult}
